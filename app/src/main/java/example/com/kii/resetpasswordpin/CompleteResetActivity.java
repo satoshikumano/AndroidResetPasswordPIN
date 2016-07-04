@@ -25,9 +25,7 @@ public class CompleteResetActivity extends AppCompatActivity implements AlertDia
         final EditText newPasswordEdit = (EditText) findViewById(R.id.editTextNewPassword);
         Button completeResetButton = (Button) findViewById(R.id.buttonCompleteReset);
 
-        //final String userID = savedInstanceState.getString("USER_ID");
-        // FIXME: use given USER ID when server is fixed.
-        final String userID =  "0f2968a00022-5879-6e11-d6e3-0288cb07";
+        final String userID = getIntent().getExtras().getString("USER_ID");
         completeResetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
